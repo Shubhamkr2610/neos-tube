@@ -1,0 +1,17 @@
+.homepage-container{
+    display: flex;
+    min-height: 100vh;
+    background-color: #b1eeef47;
+}
+
+.video-card-container{
+    color: black;
+    width: 85%;
+    /* display: flex; */
+    /* flex-wrap: wrap;  */
+     /* flex-direction: column; */
+}
+ .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+} 
