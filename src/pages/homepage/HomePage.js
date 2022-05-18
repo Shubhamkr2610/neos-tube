@@ -1,10 +1,14 @@
-import { Chip } from '@mui/material'
-import React from 'react'
-import { Sidebar } from '../../components/sidebar/Sidebar'
-import './homepage.css'
-import { VideoCard } from '../../components/videocard/VideoCard'
-export const HomePage = () => {
+import { Chip } from '@mui/material';
+import React from 'react';
+import { Sidebar } from '../../components/sidebar/Sidebar';
+import './homepage.css';
+import { VideoCard } from '../../components/videocard/VideoCard';
+import { useVideoList } from "../../context/videoContext";
 
+export const HomePage = () => {
+const {videoList} = useVideoList();
+
+console.log(videoList)
   const handleClick = () =>{
 
   }
@@ -19,13 +23,14 @@ export const HomePage = () => {
           <Chip label="valentine" onClick={handleClick} />
           <Chip label="Lofi" onClick={handleClick} />
           <div className='wrapper'>
-              <VideoCard />
-              <VideoCard />
-              <VideoCard />
-              <VideoCard />
+
+            
+          {videoList.map((video)=>{
+           return <VideoCard key={video._id} thumbnail={video.thumbnail} title={video.title} chanel_pic={video.channel_pic} views={video.views}/>
+             })}
+               
           </div>
-       
-          
+    
       </div>
         </div>
      

@@ -1,0 +1,21 @@
+.video-card{
+    height: 17rem;
+    width: 18rem;
+    box-shadow:  rgba(0,0,0,.35) 0px 5px 15px;
+
+}
+.video-card-img{
+    height: 11rem;
+    width: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.channel-logo{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 60%;
+
+}
+.video-card-title-container{
+    display: flex;
+}
