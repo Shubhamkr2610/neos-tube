@@ -1,10 +1,12 @@
 import React from 'react'
-import { songimg1 } from '../../asset'
+import { Link } from 'react-router-dom'
+// import { songimg1 } //from '../../asset'
 import './videocard.css'
 
-export const VideoCard = ({thumbnail, title,chanel_pic, views  }) => {
+export const VideoCard = ({thumbnail, title,chanel_pic  }) => {
   return (
     <>
+    <Link to={{}}>
     <div className='video-card'> 
       <img src= { thumbnail } className='video-card-img' />
       <div className='video-card-title-container'>
@@ -12,7 +14,7 @@ export const VideoCard = ({thumbnail, title,chanel_pic, views  }) => {
       <div> {title}</div>
     </div>
     </div>
-    
+    </Link>
     </>
   )
 }

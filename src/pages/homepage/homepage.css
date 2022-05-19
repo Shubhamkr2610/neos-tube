@@ -1,5 +1,6 @@
 .homepage-container{
    padding-top: 1rem;
+   padding-bottom: 1rem;
     display: flex;
     min-height: 100vh;
     background-color: #b1eeef47;
@@ -8,13 +9,26 @@
 .video-card-container{
     color: black;
     width: 85%;
-    /* display: flex; */
-    /* flex-wrap: wrap;  */
-     /* flex-direction: column; */
 }
- .wrapper{
+.wrapper{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
 } 
+
+@media(max-width : 800px) {
+    .wrapper{
+        justify-content: space-between;
+    }
+
+}
+
+@media(max-width : 360px) {
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+  
+}

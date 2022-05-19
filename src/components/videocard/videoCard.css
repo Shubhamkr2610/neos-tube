@@ -19,3 +19,12 @@
 .video-card-title-container{
     display: flex;
 }
+@media(max-width : 800px) {
+
+
+}
+
+@media(max-width : 360px) {
+
+  
+}

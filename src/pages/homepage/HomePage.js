@@ -8,7 +8,6 @@ import { useVideoList } from "../../context/videoContext";
 export const HomePage = () => {
 const {videoList} = useVideoList();
 
-console.log(videoList)
   const handleClick = () =>{
 
   }
@@ -23,8 +22,6 @@ console.log(videoList)
           <Chip label="valentine" onClick={handleClick} />
           <Chip label="Lofi" onClick={handleClick} />
           <div className='wrapper'>
-
-            
           {videoList.map((video)=>{
            return <VideoCard key={video._id} thumbnail={video.thumbnail} title={video.title} chanel_pic={video.channel_pic} views={video.views}/>
              })}
