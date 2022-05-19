@@ -12,26 +12,27 @@ export const Sidebar = () => {
     <div className='sidebar-icon-container'>
        
        <div className='sidebar-button-container'>
-       <HomeOutlinedIcon  sx={{ fontSize: 35 }} />
-       <p> Home</p>
+       <HomeOutlinedIcon className='sidebar-icon'  sx={{ fontSize: 35 }} />
+       <p className='sidebar-link-name'> Home</p>
        </div>
 
         <div className='sidebar-button-container'>
-        <ExploreOutlinedIcon sx={{ fontSize: 35 }}/> 
-            <p>Explore</p>
+        <ExploreOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/> 
+            <p className='sidebar-link-name'>Explore</p>
         </div>
         <div className='sidebar-button-container'>
-        <HistoryIcon sx={{ fontSize: 35 }}/>
-            <p>History</p>
+        <HistoryIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
+            <p className='sidebar-link-name'>History</p>
         </div>
         <div className='sidebar-button-container'>
-        <WatchLaterOutlinedIcon sx={{ fontSize: 35 }}/>
-            <p>Watch Later</p>
+        <ThumbUpAltOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
+            <p className='sidebar-link-name'>Liked Videos</p>
         </div>
         <div className='sidebar-button-container'>
-        <ThumbUpAltOutlinedIcon sx={{ fontSize: 35 }}/>
-            <p>Liked Videos</p>
+        <WatchLaterOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
+            <p className='sidebar-link-name'>Watch Later</p>
         </div>
+       
         
    </div>
    

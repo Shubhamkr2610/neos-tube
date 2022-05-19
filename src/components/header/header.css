@@ -66,20 +66,12 @@
         justify-content: space-evenly;
     }
     .brand-title {
-        /* font-size: 5vw; */
         margin-left: 4px;
     }
-    /* .brand-title{
-      
-    } */
+   
     .brand-title img{
         height: 20px;
         width: 20px;
     }
-    .searchbar-container{
-        /* display: none; */
-        /* width: 10%; */
-        /* justify-content: center; */
-        /* align-items: center; */
-    }
+  
 }
