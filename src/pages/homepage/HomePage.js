@@ -23,7 +23,7 @@ const {videoList} = useVideoList();
           <Chip label="Lofi" onClick={handleClick} />
           <div className='wrapper'>
           {videoList.map((video)=>{
-           return <VideoCard key={video._id} thumbnail={video.thumbnail} title={video.title} chanel_pic={video.channel_pic} views={video.views}/>
+           return <VideoCard key={video._id} _id={video._id} thumbnail={video.thumbnail} title={video.title} chanel_pic={video.channel_pic} views={video.views}/>
              })}
                
           </div>
