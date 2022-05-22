@@ -9,6 +9,7 @@
 }
 body{
     background-color: var();
+    overflow-x: hidden;
 }
 a{
     text-decoration: inherit;

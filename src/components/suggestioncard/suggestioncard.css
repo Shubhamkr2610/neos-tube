@@ -1,0 +1,31 @@
+.suggestion-card-container{
+    display: flex;
+    height: 10rem;
+    min-width: 15%;
+    box-shadow:  rgba(0,0,0,.35) 0px 5px 10px;
+    gap: 1rem;
+    line-height: 2rem;
+    margin-bottom: 8px ;
+}
+.suggestion-image-container img{
+    height: 100%;
+    width: 10rem;
+    object-fit: fill;
+}
+.suggestion-channel-image{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.wrapper{
+    display: flex;
+}
+@media(max-width : 800px) {
+  
+
+}
+
+@media(max-width : 360px) {
+    
+}
