@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './videocard.css'
+import './videoCard.css'
 
 export const VideoCard = ({ _id,thumbnail, title,description,creator,views,channel_pic,categoryName  }) => {
   return (
