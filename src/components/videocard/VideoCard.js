@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { songimg1 } //from '../../asset'
-import './videocard.css'
+import './videoCard.css'
 
 export const VideoCard = ({thumbnail, title,chanel_pic  }) => {
   return (
