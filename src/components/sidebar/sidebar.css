@@ -27,22 +27,21 @@
 
 @media(max-width : 360px) {
    .sidebar-icon-container{
-    min-width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 7vh;
+        min-width: 100%;
+        min-height: 7vh;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     
-  }
+    }
   .sidebar-icon{
-      font-size: x-large !important;
-     
-  }
+        font-size: 8vw !important;
+    }
   .sidebar-button-container{
-    margin-left: 0rem;
-}
+        margin-left: 0rem;
+    }
 }

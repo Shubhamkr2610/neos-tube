@@ -10,21 +10,32 @@
     object-fit: fill;
     cursor: pointer;
 }
+
+.video-card-title-container{
+    padding: 4px;
+    display: flex;
+}
 .channel-logo{
     height: 3.5rem;
     width: 3.5rem;
     border-radius: 60%;
 
 }
-.video-card-title-container{
-    display: flex;
+.video-card-title{
+    margin-left:4px ;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 @media(max-width : 800px) {
-
-
+    .video-card{
+        max-width: 100%;
+    }
 }
 
 @media(max-width : 360px) {
-
-  
+    .video-card{
+        max-width: 100%;
+    }
 }
