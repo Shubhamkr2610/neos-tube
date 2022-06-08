@@ -6,26 +6,24 @@ import { VideoCard } from '../../components/videocard/VideoCard';
 import { useVideoList } from "../../context/videoContext";
 
 export const HomePage = () => {
-const {videoList} = useVideoList();
+const {videoList , chipFilter ,allFilterhandler,neogFilterHandler, trendingFilterhandler, evergreenFilterhandler, latestFilterhandler , loveFilterhandler} = useVideoList();
 
-  const handleClick = () =>{
-
-  }
+ 
   return (
       <>
       <div className='homepage-container'>
         <Sidebar/>
         <div className='video-card-container'>
-          <Chip label="NeoG-anthem Special" onClick={handleClick} />
-          <Chip label="Trending" onClick={handleClick} />
-          <Chip label="Latest" onClick={handleClick} />
-          <Chip label="valentine" onClick={handleClick} />
-          <Chip label="Lofi" onClick={handleClick} />
+          <Chip label="All" onClick={allFilterhandler} />
+          <Chip label="NeoG-anthem Special" onClick={neogFilterHandler} />
+          <Chip label="Trending" onClick={trendingFilterhandler} />
+          <Chip label="Evergreen" onClick={evergreenFilterhandler} />
+          <Chip label="Latest" onClick={latestFilterhandler} />
+          <Chip label="Love" onClick={loveFilterhandler} /> 
           <div className='wrapper'>
-          {videoList.map((video)=>{
-           return <VideoCard key={video._id} _id={video._id} thumbnail={video.thumbnail} title={video.title} chanel_pic={video.channel_pic} views={video.views}/>
-             })}
-               
+          {chipFilter.map((video)=>{
+           return <VideoCard key={video._id} _id={video._id} thumbnail={video.thumbnail} title={video.title} channel_pic={video.channel_pic} views={video.views}/>
+          })}     
           </div>
     
       </div>
