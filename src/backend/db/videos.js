@@ -18,7 +18,7 @@ export const videos = [
     createdAt: " 07th FEB 2022",
     channel_pic: channelimg1,
     video: "5Eqb_-j3FDA",
-    categoryName: "song",
+    categoryName: "trending",
   },
   {
     _id: uuid(),
@@ -30,7 +30,7 @@ export const videos = [
     createdAt: "Oct 22, 2021",
     channel_pic: channelimg2,
     video: "h8L2JfZuIxE",
-    categoryName: "song",
+    categoryName: "trending",
   },
   {
     _id: uuid(),
@@ -42,7 +42,7 @@ export const videos = [
     createdAt: "Mar 1, 2022",
     channel_pic: channelimg3,
     video: "7c3-Gei5j4w",
-    categoryName: "song",
+    categoryName: "trending",
   },
   {
     _id: uuid(),
@@ -55,7 +55,7 @@ export const videos = [
     createdAt: "Oct 12, 2021",
     channel_pic: channelimg4,
     video: "Gf0oGsA7DSE",
-    categoryName: "song",
+    categoryName: "latest",
   },
   {
     _id: uuid(),
@@ -68,7 +68,7 @@ export const videos = [
     createdAt: " Aug 19, 2016",
     channel_pic: channelimg1,
     video: "kw4tT7SCmaY",
-    categoryName: "song",
+    categoryName: "evergreen",
   },
   {
     _id: uuid(),
@@ -80,7 +80,7 @@ export const videos = [
     createdAt: "Apr 19, 2022",
     channel_pic: channelimg5,
     video: "G-VGi8FodFs",
-    categoryName: "song",
+    categoryName: "latest",
   },
   {
     _id: uuid(),
@@ -93,7 +93,7 @@ export const videos = [
     createdAt: "Feb 15, 2022",
     channel_pic: channelimg5,
     video: "jJLP6P5QaGs",
-    categoryName: "song",
+    categoryName: "latest",
   },
   {
     _id: uuid(),
@@ -105,7 +105,7 @@ export const videos = [
     createdAt: "Mar 26, 2020",
     channel_pic: channelimg6,
     video: "qN5OXhQ_UWs",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -118,7 +118,7 @@ export const videos = [
     createdAt: "Dec 29, 2021",
     channel_pic: channelimg7,
     video: "y7MW7d8fb1Y",
-    categoryName: "song",
+    categoryName: "trending",
   },
   {
     _id: uuid(),
@@ -130,7 +130,7 @@ export const videos = [
     createdAt: " Feb 12, 2021",
     channel_pic: channelimg7,
     video: "USccSZnS8MQ",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -142,7 +142,7 @@ export const videos = [
     createdAt: "Jul 31, 2020",
     channel_pic: channelimg8,
     video: "lX3vT_Gm_HE",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -159,7 +159,7 @@ export const videos = [
     createdAt: "Oct 18, 2021",
     channel_pic: channelimg4,
     video: "Irw8llgSC3s",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -171,7 +171,7 @@ export const videos = [
     createdAt: " Sep 15, 2021",
     channel_pic: channelimg9,
     video: "dZTC6YcEAJE",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -184,7 +184,7 @@ export const videos = [
     createdAt: "Mar 31, 2022",
     channel_pic: channelimg4,
     video: "Tc8kb5HBNrA",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -196,7 +196,7 @@ export const videos = [
     createdAt: "Apr 27, 2021",
     channel_pic: channelimg9,
     video: "eY3m3ji1q84",
-    categoryName: "song",
+    categoryName: "evergreen",
   },
   {
     _id: uuid(),
@@ -208,7 +208,7 @@ export const videos = [
     createdAt: "Apr 9, 2020",
     channel_pic: channelimg9,
     video: "K0ibsAQTyRQ",
-    categoryName: "song",
+    categoryName: "evergreen",
   },
   {
     _id: uuid(),
@@ -221,7 +221,7 @@ export const videos = [
     createdAt: "Sep 4, 2017",
     channel_pic: channelimg3,
     video: "284Ov7ysmfA",
-    categoryName: "song",
+    categoryName: "neog",
   },
   {
     _id: uuid(),
@@ -235,7 +235,7 @@ export const videos = [
     createdAt: "Feb 1, 2022",
     channel_pic: channelimg4,
     video: "LZ-Qn4q3sbU",
-    categoryName: "song",
+    categoryName: "love",
   },
   {
     _id: uuid(),
@@ -248,6 +248,6 @@ export const videos = [
     createdAt: "Mar 10, 2022",
     channel_pic: channelimg4,
     video: "3fpP2dM02tM",
-    categoryName: "song",
+    categoryName: "love",
   },
 ];
