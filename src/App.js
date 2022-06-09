@@ -1,3 +1,4 @@
+import { Login } from "./pages/loginpage/Login.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/header/Header";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/play" element={<PlayVideo />}>
             <Route path=":videoListId" element={<VideoPlayer />} />
           </Route>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
       </div>
     </BrowserRouter>
