@@ -5,6 +5,8 @@ import { Header } from "./components/header/Header";
 import { VideoPlayer } from "./components/videoplayer/VideoPlayer";
 import { HomePage } from "./pages/homepage/HomePage";
 import { PlayVideo } from "./pages/playvideopage/PlayVideo";
+import { Profile } from "./pages/profile/Profile.js";
+import { Signup } from "./pages/signup/Signup.js";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path=":videoListId" element={<VideoPlayer />} />
           </Route>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/signup" element={<Signup/>}/>
         </Routes>
       </div>
     </BrowserRouter>

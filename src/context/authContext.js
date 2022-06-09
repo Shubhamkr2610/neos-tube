@@ -9,11 +9,11 @@ const AuthProvider = ({children}) =>{
 
     const login = async (e,email,password)=> {
         e.preventDefault()
-        let userData = JSON.stringify({email,password})
+        // let userData ={email,password}  
         // console.log(userData)
 
         try{
-            const {data} = await axios.post("/api/auth/login", userData)
+            const {data} = await axios.post("/api/auth/login", {email,password})
 
             console.log(data)
 
@@ -28,10 +28,33 @@ const AuthProvider = ({children}) =>{
         }
         
     }
-    // setUser("shu")
-    // console.log(user)
+
+    const logout = () =>{
+        setUser(null)
+
+    }
+
+    const signup = async (e, userData) =>{
+        e.preventDefault()
+
+      
+        try{
+           const {data} =await axios.post("/api/auth/signup", userData)
+
+           
+           setUser({id:data.createdUser._id , enocdedToken:data.encodedToken, firstName: data.createdUser.firstName, lastName:data.createdUser.lastName, email:data.createdUser.email})
+           alert("user signup successfully")
+        }
+        catch(error){
+            console.log(error)
+        }
+        
+    }
+    
+   
+
     return(
-        <authContext.Provider value={{login, user}} >
+        <authContext.Provider value={{login, user ,logout , signup}} >
             {children}
         </authContext.Provider>
 
