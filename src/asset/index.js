@@ -27,5 +27,6 @@ import channelimg6 from './vishalmishra.jpg';
 import channelimg7 from './zeemusic.jpg';
 import channelimg8 from './desimusic.jpg';
 import channelimg9 from './vyrl.jpg';
+import avatar from './shubh.jpg';
 
-export { brandlogo , songimg1, songimg2, songimg3, songimg4, songimg5, songimg6, songimg7, songimg8, songimg9, songimg10, songimg11, songimg12, songimg13, songimg14,songimg15, songimg16, songimg17, songimg18,songimg19, channelimg1, channelimg2, channelimg3, channelimg4, channelimg5, channelimg6, channelimg7, channelimg8, channelimg9} 
+export { brandlogo , songimg1, songimg2, songimg3, songimg4, songimg5, songimg6, songimg7, songimg8, songimg9, songimg10, songimg11, songimg12, songimg13, songimg14,songimg15, songimg16, songimg17, songimg18,songimg19, channelimg1, channelimg2, channelimg3, channelimg4, channelimg5, channelimg6, channelimg7, channelimg8, channelimg9, avatar} 
