@@ -10,13 +10,12 @@ export const SuggestionCard = ({ _id,thumbnail, title,description,creator,views,
             <div className='suggestion-image-container'>
                 <img src={thumbnail} alt="video-suggestion" />
             </div>
-            <div className='wrapper'>
-               
-                    <p>{title}</p>
+            <div className='suggestion-card-wrapper'>
+                    <p className='suggestion-card-title'>{title}</p>
                     <img className='suggestion-channel-image' src={channel_pic} alt="" />
-                <div>
-                    <p>{creator}</p>
-                    <p>{views}</p>
+                <div className='suggestion-card-creator-container'>
+                    <p className='suggestion-card-creator'>{creator}</p>
+                    <p className='suggestion-card-view'>{views}</p>
                 </div>
                
             </div>

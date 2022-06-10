@@ -1,16 +1,26 @@
 .suggestion-card-container{
-    display: flex;
     height: 10rem;
     min-width: 15%;
+    display: flex;
     box-shadow:  rgba(0,0,0,.35) 0px 5px 10px;
-    gap: 1rem;
+    gap: 10px;
     line-height: 2rem;
     margin-bottom: 8px ;
 }
 .suggestion-image-container img{
     height: 100%;
-    width: 10rem;
+    width: 13rem;
     object-fit: fill;
+}
+.suggestion-card-wrapper{
+    display: flex;
+    flex-wrap: wrap; 
+}
+.suggestion-card-title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 .suggestion-channel-image{
     height: 3rem;
@@ -18,14 +28,63 @@
     border-radius: 50%;
     object-fit: cover;
 }
-.wrapper{
-    display: flex;
+.suggestion-card-creator{   
+    font-size: 1rem;
 }
 @media(max-width : 800px) {
-  
-
+    .suggestion-card-container{
+        width: 100%;  
+        line-height: normal; 
+    }
+    .suggestion-card-title{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .suggestion-channel-image{
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .suggestion-card-creator{
+        font-size: 10px;
+    }
+    .suggestion-card-view{
+        font-size: 10px;
+    }
 }
 
 @media(max-width : 360px) {
-    
+    .suggestion-card-container{
+        width: 98%;
+        gap: 0px;
+        padding-left: 3px;
+    }
+    .suggestion-card-title{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .suggestion-channel-image{
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .suggestion-card-creator{
+        font-size: 10px;
+    }
+    .suggestion-card-view{
+        font-size: 10px;
+    }
+    .suggestion-card-creator-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: baseline;
+        align-items:center ;
+    }
 }
