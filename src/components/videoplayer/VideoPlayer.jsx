@@ -19,12 +19,13 @@ export const VideoPlayer = () => {
   
         <iframe
                   // width="942" height="530"
-                  width="1050px" height="530"
+                  // width="1050px" height="530"
                     src={`https://www.youtube.com/embed/${isVideoCardExist.video}?autoplay=1`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     title="Embedded youtube"
+                    className='youtube-iframe'
                 />
                 <p className='video-title' >{isVideoCardExist.title}</p>
                 <div className='channel-logo-container'>
@@ -52,7 +53,7 @@ export const VideoPlayer = () => {
                   </div>
                 </div>
 
-                <p>{isVideoCardExist.description}</p>
+                <p className='video-description'>{isVideoCardExist.description}</p>
       </>
   )
 }
