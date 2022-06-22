@@ -7,6 +7,8 @@ import { HomePage } from "./pages/homepage/HomePage";
 import { PlayVideo } from "./pages/playvideopage/PlayVideo";
 import { Profile } from "./pages/profile/Profile.js";
 import { Signup } from "./pages/signup/Signup.js";
+import { Like } from "./pages/likepage/Like.js";
+import { PrivateRoute } from "./components/PrivateRoute.js";
 
 function App() {
   return (
@@ -21,6 +23,11 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/signup" element={<Signup/>}/>
+          <Route element={<PrivateRoute/>}>
+
+              <Route path="/like" element={<Like/>}/>
+
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
