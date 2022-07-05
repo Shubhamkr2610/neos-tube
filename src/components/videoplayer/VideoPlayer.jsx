@@ -5,6 +5,8 @@ import { useVideoList } from '../../context/videoContext'
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
+import { useLike } from '../../context/likeContext';
+import { useAuth } from '../../context/authContext';
 
 
 export const VideoPlayer = () => {
@@ -12,6 +14,9 @@ export const VideoPlayer = () => {
 
     const {videoList} = useVideoList()
     const {videoListId} = useParams()
+    const {fetchLike , likeVideo} = useLike() 
+    const {user} = useAuth();
+    console.log(user.encodedToken);
 
     const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
   return (
@@ -54,6 +59,8 @@ export const VideoPlayer = () => {
                 </div>
 
                 <p className='video-description'>{isVideoCardExist.description}</p>
+
+                <button  onClick={()=>likeVideo(videoListId, user.encodedToken)}>like</button>
       </>
   )
 }

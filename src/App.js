@@ -25,7 +25,7 @@ function App() {
           <Route path="/signup" element={<Signup/>}/>
           <Route element={<PrivateRoute/>}>
 
-              <Route path="/like" element={<Like/>}/>
+            <Route path="/like" element={<Like/>}/>
 
           </Route>
         </Routes>

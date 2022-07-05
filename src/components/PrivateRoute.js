@@ -5,11 +5,11 @@ import { useAuth } from '../context/authContext'
 export const PrivateRoute = () => {
 
     const {user} = useAuth()
-  return (
-    <>
+  // return (
+    // <>
         if(!user)
             return <Navigate to='/login' replace />
         return <Outlet/>
-    </>
-  )
+    // </>
+  // )
 }

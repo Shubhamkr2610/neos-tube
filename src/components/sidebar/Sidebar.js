@@ -13,7 +13,7 @@ export const Sidebar = () => {
     <div className='sidebar-icon-container'>
        
        <div className='sidebar-button-container'>
-            <Link to='/Home' className='flex-wrapper' >
+            <Link to='/' className='flex-wrapper' >
                 <HomeOutlinedIcon className='sidebar-icon'  sx={{ fontSize: 35 }} />
                 <p className='sidebar-link-name'> Home</p>
             </Link>
@@ -27,7 +27,7 @@ export const Sidebar = () => {
         </div>
 
         <div className='sidebar-button-container'>
-            <Link to='history' className='flex-wrapper'>
+            <Link to='/history' className='flex-wrapper'>
        
                 <HistoryIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
                 <p className='sidebar-link-name'>History</p>
