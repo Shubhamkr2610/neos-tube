@@ -1,7 +1,7 @@
 import React from 'react'
 import './sidebar.css'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import HistoryIcon from '@mui/icons-material/History';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
@@ -20,9 +20,9 @@ export const Sidebar = () => {
        </div>
 
         <div className='sidebar-button-container'>
-            <Link to='/explore' className='flex-wrapper'>
-                <ExploreOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/> 
-                <p className='sidebar-link-name'>Explore</p>
+            <Link to='/library' className='flex-wrapper'>
+                <VideoLibraryIcon className='sidebar-icon' sx={{ fontSize: 35 }}/> 
+                <p className='sidebar-link-name'>Library</p>
             </Link>
         </div>
 

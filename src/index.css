@@ -1,21 +1,8 @@
 
 :root{
 
-    --video-library-primary-color: #ff0000;
-    --clr-text-color: var(--clr-white);
+    --video-library-primary-color: #F40075;
+    --button-bg-color-primary:#ffffff;
+    --video-library-bg-primary-color:#b1eeef47;
     --clr-page-bg: #222;
-    --clr-page-light-bg: #11aaac;
-    --clr-page-dark-bg: #e7e7e7;
-    --clr-card-bg: var(--clr-page-dark-bg);
-    --clr-border-color-3: #303030;
-    --clr-primary-light: #2f2f2f;
-    --clr-input-bg: #333;
-    --clr-border-color-2: var(--clr-primary);
-    --clr-card-name: var(--clr-white);
-    --clr-label-white: #707070;
-    --clr-input-bg: #3e3e3e63;
-    --clr-toast-bg: var(--clr-page-dark-bg);
-    --clr-toast-close: #ffffff6b;
-    --clr-error: #f66969;
-    --box-shadow-1: rgba(0,0,0,.35) 0px 5px 15px;
 }
