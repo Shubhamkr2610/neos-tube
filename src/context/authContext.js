@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
-
+import { toast } from "react-toastify";
 const authContext = createContext();
 
 const AuthProvider = ({children}) =>{
@@ -11,9 +11,10 @@ const AuthProvider = ({children}) =>{
 
         try{
             const {data} = await axios.post("/api/auth/login", {email,password})
-
+            localStorage.setItem(" user ", JSON.stringify({enocdedToken:data.encodedToken, firstName: data.foundUser.firstName, lastName:data.foundUser.lastName, email:data.foundUser.email})
+            );
             setUser({id:data.foundUser._id , enocdedToken:data.encodedToken, firstName: data.foundUser.firstName, lastName:data.foundUser.lastName, email:data.foundUser.email})
-            alert("userloggedin successfully")
+            toast.success("User Loggedin Successfully")
         }
         catch(error){
             console.log(error)
@@ -23,6 +24,7 @@ const AuthProvider = ({children}) =>{
 
     const logout = () =>{
         setUser(null)
+        toast.error("User Loggedout Successfully")
 
     }
 
@@ -34,7 +36,7 @@ const AuthProvider = ({children}) =>{
 
            
            setUser({id:data.createdUser._id , enocdedToken:data.encodedToken, firstName: data.createdUser.firstName, lastName:data.createdUser.lastName, email:data.createdUser.email})
-           alert("user signup successfully")
+           toast.success("User Signedup Successfully")
         }
         catch(error){
             console.log(error)
