@@ -11,10 +11,12 @@ const AuthProvider = ({children}) =>{
 
         try{
             const {data} = await axios.post("/api/auth/login", {email,password})
+
             localStorage.setItem(" user ", JSON.stringify({enocdedToken:data.encodedToken, firstName: data.foundUser.firstName, lastName:data.foundUser.lastName, email:data.foundUser.email})
             );
             setUser({id:data.foundUser._id , enocdedToken:data.encodedToken, firstName: data.foundUser.firstName, lastName:data.foundUser.lastName, email:data.foundUser.email})
             toast.success("User Loggedin Successfully")
+
         }
         catch(error){
             console.log(error)
@@ -35,8 +37,10 @@ const AuthProvider = ({children}) =>{
            const {data} =await axios.post("/api/auth/signup", userData)
 
            
+
            setUser({id:data.createdUser._id , enocdedToken:data.encodedToken, firstName: data.createdUser.firstName, lastName:data.createdUser.lastName, email:data.createdUser.email})
            toast.success("User Signedup Successfully")
+
         }
         catch(error){
             console.log(error)

@@ -1,10 +1,11 @@
 import React from 'react'
 import './sidebar.css'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import HistoryIcon from '@mui/icons-material/History';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
   return (
@@ -12,28 +13,43 @@ export const Sidebar = () => {
     <div className='sidebar-icon-container'>
        
        <div className='sidebar-button-container'>
-       <HomeOutlinedIcon className='sidebar-icon'  sx={{ fontSize: 35 }} />
-       <p className='sidebar-link-name'> Home</p>
+            <Link to='/' className='flex-wrapper' >
+                <HomeOutlinedIcon className='sidebar-icon'  sx={{ fontSize: 35 }} />
+                <p className='sidebar-link-name'> Home</p>
+            </Link>
        </div>
 
         <div className='sidebar-button-container'>
-        <ExploreOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/> 
-            <p className='sidebar-link-name'>Explore</p>
+            <Link to='/library' className='flex-wrapper'>
+                <VideoLibraryIcon className='sidebar-icon' sx={{ fontSize: 35 }}/> 
+                <p className='sidebar-link-name'>Library</p>
+            </Link>
         </div>
+
         <div className='sidebar-button-container'>
-        <HistoryIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
-            <p className='sidebar-link-name'>History</p>
+            <Link to='/history' className='flex-wrapper'>
+       
+                <HistoryIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
+                <p className='sidebar-link-name'>History</p>
+            </Link>
         </div>
+
+
         <div className='sidebar-button-container'>
-        <ThumbUpAltOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
-            <p className='sidebar-link-name'>Liked Videos</p>
+            <Link to='/like' className='flex-wrapper'>
+                <ThumbUpAltOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
+                <p className='sidebar-link-name'>Liked Videos</p>
+            </Link>
         </div>
+
+
         <div className='sidebar-button-container'>
-        <WatchLaterOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
-            <p className='sidebar-link-name'>Watch Later</p>
+            <Link to='/watchlater'  className='flex-wrapper'>
+                <WatchLaterOutlinedIcon className='sidebar-icon' sx={{ fontSize: 35 }}/>
+                <p className='sidebar-link-name'>Watch Later</p>
+            </Link>
         </div>
        
-        
    </div>
    
 

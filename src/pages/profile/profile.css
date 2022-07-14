@@ -5,8 +5,8 @@
     align-items: center;
 }
 .profile-container{
-    border: 2px solid  #F40075;
-    background-color: white;
+    border: 2px solid  var(--video-library-primary-color);
+    background-color: var(--button-bg-color-primary);
     box-shadow:  rgba(0,0,0,.35) 0px 5px 15px;
     width: 30%;
     height: 40vh;
@@ -25,14 +25,14 @@
 }
 .profile-title{
     font-size: 3vw;
-    color: #F40075;
+    color: var(--video-library-primary-color);
 }
 .profile-name-container{
     width: 90%;
     height: 2rem;
     font-size: large;
    text-align: center;
-   border: 2px solid black;
+   border: 2px solid var(--clr-page-bg);
 }
 .logout-button{
     cursor: pointer;

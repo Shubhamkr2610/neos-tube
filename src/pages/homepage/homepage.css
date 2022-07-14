@@ -3,11 +3,10 @@
    padding-bottom: 1rem;
     display: flex;
     min-height: 100vh;
-    background-color: #b1eeef47;
 }
 
 .video-card-container{
-    color: black;
+    color: var(--clr-page-bg);
     width: 85%;
 }
 .wrapper{

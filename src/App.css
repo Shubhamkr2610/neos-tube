@@ -8,7 +8,7 @@
     font-family:  "Poppins", "Montserrat",sans-serif;
 }
 body{
-    background-color: #b1eeef47;
+    background-color: var(--video-library-bg-primary-color);
     overflow-x: hidden;
 }
 a{
@@ -17,5 +17,4 @@ a{
 }
 .app{
     min-height: 100vh;
-    /* background-color: var(--clr-page-light-bg); */
 }

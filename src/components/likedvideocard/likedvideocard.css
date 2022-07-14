@@ -1,0 +1,54 @@
+.liked-video-card {
+    height: 18rem;
+    width: 18rem;
+    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.liked-video-card-img {
+    height: 12rem;
+    width: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+
+.liked-video-card-title-container {
+    padding: 4px;
+    display: flex;
+}
+
+.liked-channel-logo {
+    height: 3.3rem;
+    width: 3.3rem;
+    border-radius: 60%;
+
+}
+
+.liked-video-card-title {
+    margin-left: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.delete-card-button {
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@media(max-width : 800px) {
+    .liked-video-card {
+        max-width: 100%;
+    }
+}
+
+@media(max-width : 360px) {
+    .liked-video-card {
+        max-width: 100%;
+    }
+}
