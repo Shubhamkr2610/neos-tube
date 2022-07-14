@@ -14,8 +14,8 @@
 }
 .channel-logo-container{
     width: 95%;
-    border-top:  2px solid black;
-    border-bottom:  2px solid black;
+    border-top:  2px solid var( --clr-page-bg);
+    border-bottom:  2px solid var( --clr-page-bg);
     height: 10vh;
     display: flex;
     align-items: center;
@@ -29,13 +29,18 @@
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    margin: 10px 0px;
 }
 .button-container{
     display: flex;
-   
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.function-button-title{
+    font-size: 1rem;
 }
 @media(max-width : 800px) {
-   
     .youtube-iframe{
         width: 100%;
         height: 50vh;

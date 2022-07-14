@@ -1,5 +1,5 @@
 import { Login } from "./pages/loginpage/Login.js";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/header/Header";
 import { VideoPlayer } from "./components/videoplayer/VideoPlayer";
@@ -7,10 +7,25 @@ import { HomePage } from "./pages/homepage/HomePage";
 import { PlayVideo } from "./pages/playvideopage/PlayVideo";
 import { Profile } from "./pages/profile/Profile.js";
 import { Signup } from "./pages/signup/Signup.js";
+import { Like } from "./pages/likepage/Like.js";
+import { PrivateRoute } from "./components/PrivateRoute.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+    <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="app">
         <Header />
         <Routes>
@@ -21,9 +36,15 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/signup" element={<Signup/>}/>
+          <Route element={<PrivateRoute/>}>
+
+            <Route path="/like" element={<Like/>}/>
+
+          </Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    
+    </>
   );
 }
 
