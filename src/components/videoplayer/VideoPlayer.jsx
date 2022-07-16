@@ -11,16 +11,13 @@ import { useWatchLaterVideo } from '../../context/watchLaterContext';
 
 
 export const VideoPlayer = () => {
-
-
     const {videoList} = useVideoList()
     const {videoListId} = useParams()
     const {fetchLike , likeVideo} = useLike() 
     const {user} = useAuth();
     const {postWatchLater} = useWatchLaterVideo()
-    // console.log(user.encodedToken);
-
     const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
+
   return (
       <>
   

@@ -12,7 +12,6 @@ const WatchProvider= ({children})=>{
 
     const { user } = useAuth();
     const { videoList } = useVideoList();
-    // const { videoListId } = useParams();
     const [ getWatchVideo, setGetWatchVideo] = useState([]);
     const fetchWatchLater = async () => {
       try {
@@ -21,7 +20,6 @@ const WatchProvider= ({children})=>{
             authorization: user.encodedToken,
           },
         });
-        console.log(res.data);
         setGetWatchVideo(res.data.watchlater);
       } catch (error) {
         console.log(error);
@@ -41,9 +39,8 @@ const WatchProvider= ({children})=>{
             },
           }
         );
-        // console.log(res.data);
         setGetWatchVideo(res.data.watchlater);
-        toast.success("Video Liked successfully")
+        toast.success("Video Added to Watch Later")
       } catch (error) {
         console.log(error);
       }

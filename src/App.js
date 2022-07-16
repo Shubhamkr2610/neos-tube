@@ -35,10 +35,10 @@ function App() {
             <Route path=":videoListId" element={<VideoPlayer />} />
           </Route>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/profile" element={<Profile/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route element={<PrivateRoute/>}>
 
+            <Route path="/profile" element={<Profile/>}/>
             <Route path="/like" element={<Like/>}/>
             <Route path= "watchlater" element={<WatchLater/>} />
 

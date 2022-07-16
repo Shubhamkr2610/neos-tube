@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const authContext = createContext();
 
 const AuthProvider = ({children}) =>{
-    const [user , setUser] = useState(null);
+    const [user , setUser] = useState(JSON.parse( localStorage.getItem("user")));
 
     const login = async (e,email,password)=> {
         e.preventDefault()
@@ -21,9 +21,9 @@ const AuthProvider = ({children}) =>{
         catch(error){
             console.log(error)
         }
+
         
     }
-
     const logout = () =>{
         localStorage.removeItem("user");
         setUser(null)
