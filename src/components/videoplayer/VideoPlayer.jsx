@@ -7,18 +7,17 @@ import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import { useLike } from '../../context/likeContext';
 import { useAuth } from '../../context/authContext';
+import { useWatchLaterVideo } from '../../context/watchLaterContext';
 
 
 export const VideoPlayer = () => {
-
-
     const {videoList} = useVideoList()
     const {videoListId} = useParams()
     const {fetchLike , likeVideo} = useLike() 
     const {user} = useAuth();
-    // console.log(user.encodedToken);
-
+    const {postWatchLater} = useWatchLaterVideo()
     const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
+
   return (
       <>
   
@@ -50,7 +49,7 @@ export const VideoPlayer = () => {
                     <p className='function-button-title'>Save to play list</p>
                   </button>
 
-                  <button className='button-container'>
+                  <button className='button-container'  onClick={()=>postWatchLater(videoListId, user.encodedToken)}>
                     <WatchLaterOutlinedIcon/>
                     <p className='function-button-title'>Watch Later</p>
                   </button>

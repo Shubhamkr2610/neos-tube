@@ -11,6 +11,7 @@ import { Like } from "./pages/likepage/Like.js";
 import { PrivateRoute } from "./components/PrivateRoute.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import { WatchLater } from "./pages/watchlaterpage/WatchLater.js";
 
 function App() {
   return (
@@ -34,11 +35,12 @@ function App() {
             <Route path=":videoListId" element={<VideoPlayer />} />
           </Route>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/profile" element={<Profile/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route element={<PrivateRoute/>}>
 
+            <Route path="/profile" element={<Profile/>}/>
             <Route path="/like" element={<Like/>}/>
+            <Route path= "watchlater" element={<WatchLater/>} />
 
           </Route>
         </Routes>

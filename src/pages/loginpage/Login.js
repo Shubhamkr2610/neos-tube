@@ -35,7 +35,5 @@ export const Login = () => {
       </div>
     </div>
     </>
-
-    // setEmail("guest@gmail.com"); setPassword("guestlogin123");
   )
 }
