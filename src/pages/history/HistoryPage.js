@@ -17,10 +17,9 @@ export const History = () => {
         <div className="empty-like-page-container">
           <div className="empty-like-page-wrapper">
             <p className="empty-like-page-heading">
-              There is no liked video 😢
+              There is no video 😢
             </p>
             <Link to="/" className="empty-like-page-button">
-              
               Explore video
             </Link>
           </div>
@@ -34,7 +33,6 @@ export const History = () => {
               {getHistory.map((video) => {
                 return (
                   <LikedVideoCard
-
                     key={video._id}
                     removeVideoCard={deleteHistoryvideo}
                     _id={video._id}
