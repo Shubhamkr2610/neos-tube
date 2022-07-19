@@ -12,7 +12,6 @@ export const VideoCard = ({
 }) => {
   return (
     <>  
-    {/* <div > */}
       <Link to={`/play/${_id}`}>
         <div className="video-card">
           <img src={thumbnail} className="video-card-img" alt="video image" />
@@ -26,7 +25,6 @@ export const VideoCard = ({
           </div>
         </div>
       </Link>
-    {/* </div> */}
     </>
   );
 };
