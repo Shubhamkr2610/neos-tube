@@ -11,7 +11,7 @@ export const VideoCard = ({
   categoryName,
 }) => {
   return (
-    <>
+    <>  
       <Link to={`/play/${_id}`}>
         <div className="video-card">
           <img src={thumbnail} className="video-card-img" alt="video image" />

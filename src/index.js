@@ -8,6 +8,7 @@ import { AuthProvider } from "./context/authContext";
 import { LikeProvider } from "./context/likeContext";
 import { BrowserRouter } from "react-router-dom";
 import { WatchProvider } from "./context/watchLaterContext";
+import { HistoryProvider } from "./context/historyContext";
 
 // Call make Server
 makeServer();
@@ -19,7 +20,9 @@ root.render(
         <AuthProvider>
           <LikeProvider>
             <WatchProvider>
-            <App />
+              <HistoryProvider>
+                <App /> 
+              </HistoryProvider>
             </WatchProvider>
           </LikeProvider>
         </AuthProvider>

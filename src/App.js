@@ -12,6 +12,7 @@ import { PrivateRoute } from "./components/PrivateRoute.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { WatchLater } from "./pages/watchlaterpage/WatchLater.js";
+import { History } from "./pages/history/HistoryPage.js";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/like" element={<Like/>}/>
             <Route path= "watchlater" element={<WatchLater/>} />
+            <Route path="/history" element={<History/>}></Route>
 
           </Route>
         </Routes>
