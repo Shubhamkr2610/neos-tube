@@ -14,13 +14,13 @@ export const LikedVideoCard = ({
   creator,
   channel_pic,
   categoryName,
+  removeVideoCard,
 }) => {
 
   const {videoList} = useVideoList()
   const {videoListId} = useParams()
   const {removelike} = useLike()
   const {user} = useAuth();
-  // const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
   return (
     <>
         <div className="liked-video-card">
@@ -39,7 +39,7 @@ export const LikedVideoCard = ({
             />
             <div className="liked-video-card-title"> {title}</div>
           </div>
-          <button className="delete-card-button" onClick={()=>removelike(_id)}>
+          <button className="delete-card-button" onClick={()=>removeVideoCard(_id)}>
             <DeleteIcon/>
           </button>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './videoplayer.css'
 import { useParams } from 'react-router-dom'
 import { useVideoList } from '../../context/videoContext'
@@ -8,15 +8,22 @@ import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import { useLike } from '../../context/likeContext';
 import { useAuth } from '../../context/authContext';
 import { useWatchLaterVideo } from '../../context/watchLaterContext';
+import { useHistory } from '../../context/historyContext';
 
 
 export const VideoPlayer = () => {
     const {videoList} = useVideoList()
     const {videoListId} = useParams()
-    const {fetchLike , likeVideo} = useLike() 
+    const {likeVideo} = useLike() 
     const {user} = useAuth();
     const {postWatchLater} = useWatchLaterVideo()
+    const {postHistoryVideo} = useHistory()
     const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
+
+    
+  useEffect(()=>{
+    postHistoryVideo(isVideoCardExist, user.encodedToken)
+   },[isVideoCardExist])
 
   return (
       <>
