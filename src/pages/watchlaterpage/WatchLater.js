@@ -5,7 +5,7 @@ import { Sidebar } from '../../components/sidebar/Sidebar';
 import { useWatchLaterVideo } from '../../context/watchLaterContext';
 
 export const WatchLater = () => {
-    const {getWatchVideo} = useWatchLaterVideo();
+    const {getWatchVideo, deleteWatchLater} = useWatchLaterVideo();
 
   return (
     <>
@@ -25,6 +25,7 @@ export const WatchLater = () => {
               <LikedVideoCard
                 key={video._id}
                 _id={video._id}
+                removeVideoCard={deleteWatchLater}
                 thumbnail={video.thumbnail}
                 title={video.title}
                 channel_pic={video.channel_pic}

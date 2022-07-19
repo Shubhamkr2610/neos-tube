@@ -48,7 +48,7 @@ const LikeProvider = ({ children }) => {
   const removelike = async ( videoId) => {
     try {
       const res = await axios.delete(
-        '/api/user/likes/${videoId}',
+        `/api/user/likes/${videoId}`,
         {
           headers: {
             authorization:user.encodedToken,

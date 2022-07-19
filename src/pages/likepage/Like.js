@@ -6,7 +6,7 @@ import { useLike } from "../../context/likeContext";
 import "./like.css";
 
 export const Like = () => {
-  const { getlike } = useLike();
+  const { getlike , removelike} = useLike();
   return (
     <>
       {getlike.length===0? 
@@ -24,6 +24,7 @@ export const Like = () => {
             return (
               <LikedVideoCard
                 key={video._id}
+                removeVideoCard={removelike}
                 _id={video._id}
                 thumbnail={video.thumbnail}
                 title={video.title}
