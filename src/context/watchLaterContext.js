@@ -46,11 +46,26 @@ const WatchProvider= ({children})=>{
       }
     };
 
+  const deleteWatchLater = async (videoId ) =>{
+    try{
+      const res = await axios.delete(`/api/user/watchlater/${videoId}`, {
+        headers:{
+          authorization:user.encodedToken,
+        }
+      });
+      setGetWatchVideo(res.data.watchlater);
+      console.log(res.data.watchlater);
+      toast.error("Video Removed from Watch Later")
+
+    }catch(error) {
+      console.log(error)
+    }
+  }
 
 
 
 return(
-    <watchLaterContext.Provider value={{fetchWatchLater,postWatchLater, getWatchVideo}}>{children}</watchLaterContext.Provider>
+    <watchLaterContext.Provider value={{fetchWatchLater,postWatchLater, getWatchVideo , deleteWatchLater}}>{children}</watchLaterContext.Provider>
 )
 
 }
