@@ -1,54 +1,67 @@
-.playlist-modal-wrapper {
-    height: 10rem;
-    width: 22rem;
-    border: 1px solid var(--video-library-primary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.modal-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--modal-bg-color);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
 
+.playlist-modal-wrapper {
+  min-height: 10rem;
+  width: 22rem;
+  border: 1px solid var(--video-library-primary-color);
+  background-color: var(--button-bg-color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .playlist-modal-header-container {
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-text {
-    color: var(--video-library-primary-color);
-    font-weight: 700;
-    letter-spacing: 2px;
+  color: var(--video-library-primary-color);
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .modal-close-button {
-    margin-left: auto;
-    cursor: pointer;
-    color: var(--video-library-primary-color);
+  margin-left: auto;
+  cursor: pointer;
+  color: var(--video-library-primary-color);
 }
 
 .playlist-modal-name-container {
-    display: flex;
+  display: flex;
 }
 
 .modal-text-input {
-    outline: none;
-    border: 1px solid var(--video-library-primary-color);
-    background-color: transparent;
-
+  outline: none;
+  border: 1px solid var(--video-library-primary-color);
+  background-color: transparent;
 }
 
 .playlist-create-button {
-    font-weight: 700;
-    letter-spacing: 2px;
-    cursor: pointer;
-    color: var(--video-library-primary-color);
-    border: 1px solid var(--video-library-primary-color);
-    background-color: transparent;
-    margin-top: 10px;
-    padding: 5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: var(--video-library-primary-color);
+  border: 1px solid var(--video-library-primary-color);
+  background-color: transparent;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .playlist-create-button:hover {
-    background-color: var(--video-library-primary-color);
-    color: var(--button-bg-color-primary);
-
+  background-color: var(--video-library-primary-color);
+  color: var(--button-bg-color-primary);
 }

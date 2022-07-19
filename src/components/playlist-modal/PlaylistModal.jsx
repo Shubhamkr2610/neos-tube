@@ -1,15 +1,24 @@
 import React from "react";
 import "./playlistmodal.css";
 import CloseIcon from "@mui/icons-material/Close";
+import {useLibrary} from '../../context/libraryContext';
 
-export const PlayListModal = () => {
+export const PlayListModal = (video) => {
+  const {displayModal , setDisplayModal} = useLibrary();
+  const modelCloseHandler = () => {
+    setDisplayModal("none");
+  };
   return (
     <>
-      <div className="playlist-modal-wrapper">
+      <div className="modal-section" style={{display:displayModal}}>
+
+        <div className="playlist-modal-wrapper">
+
+       
         <div className="playlist-modal-container">
           <div className="playlist-modal-header-container">
             <p className="modal-text">Save TO : </p>
-            <CloseIcon  className="modal-close-button" />
+            <CloseIcon  className="modal-close-button" onClick={modelCloseHandler}/>
           </div>
 
           <div className="playlist-modal-name-container">
@@ -18,6 +27,7 @@ export const PlayListModal = () => {
           </div>
           <button className="playlist-create-button">Create Playlist</button>
         </div>
+      </div>
       </div>
     </>
   );
