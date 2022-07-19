@@ -1,0 +1,54 @@
+.playlist-modal-wrapper {
+    height: 10rem;
+    width: 22rem;
+    border: 1px solid var(--video-library-primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.playlist-modal-header-container {
+    display: flex;
+}
+
+.modal-text {
+    color: var(--video-library-primary-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.modal-close-button {
+    margin-left: auto;
+    cursor: pointer;
+    color: var(--video-library-primary-color);
+}
+
+.playlist-modal-name-container {
+    display: flex;
+}
+
+.modal-text-input {
+    outline: none;
+    border: 1px solid var(--video-library-primary-color);
+    background-color: transparent;
+
+}
+
+.playlist-create-button {
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: var(--video-library-primary-color);
+    border: 1px solid var(--video-library-primary-color);
+    background-color: transparent;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.playlist-create-button:hover {
+    background-color: var(--video-library-primary-color);
+    color: var(--button-bg-color-primary);
+
+}

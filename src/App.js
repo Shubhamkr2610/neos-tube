@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { WatchLater } from "./pages/watchlaterpage/WatchLater.js";
 import { History } from "./pages/history/HistoryPage.js";
+import { Library } from "./pages/librarypage/LibraryPage.js";
 
 function App() {
   return (
@@ -41,8 +42,9 @@ function App() {
 
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/like" element={<Like/>}/>
-            <Route path= "watchlater" element={<WatchLater/>} />
+            <Route path= "/watchlater" element={<WatchLater/>}/>
             <Route path="/history" element={<History/>}></Route>
+            <Route path="/library" element={ <Library/> }></Route>
 
           </Route>
         </Routes>
