@@ -9,6 +9,7 @@ import { LikeProvider } from "./context/likeContext";
 import { BrowserRouter } from "react-router-dom";
 import { WatchProvider } from "./context/watchLaterContext";
 import { HistoryProvider } from "./context/historyContext";
+import { LibraryProvider } from "./context/libraryContext";
 
 // Call make Server
 makeServer();
@@ -21,7 +22,9 @@ root.render(
           <LikeProvider>
             <WatchProvider>
               <HistoryProvider>
-                <App /> 
+                <LibraryProvider>
+                  <App /> 
+                </LibraryProvider>
               </HistoryProvider>
             </WatchProvider>
           </LikeProvider>

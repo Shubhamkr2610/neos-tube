@@ -5,24 +5,30 @@ import { useVideoList } from '../../context/videoContext'
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
+import { PlayListModal } from '../../components/playlist-modal/PlaylistModal';
 import { useLike } from '../../context/likeContext';
 import { useAuth } from '../../context/authContext';
 import { useWatchLaterVideo } from '../../context/watchLaterContext';
 import { useHistory } from '../../context/historyContext';
+import { useLibrary } from '../../context/libraryContext';
 
 
 export const VideoPlayer = () => {
-    const {videoList} = useVideoList()
-    const {videoListId} = useParams()
-    const {likeVideo} = useLike() 
+    const {videoList} = useVideoList();
+    const {videoListId} = useParams();
+    const {likeVideo} = useLike();
     const {user} = useAuth();
-    const {postWatchLater} = useWatchLaterVideo()
-    const {postHistoryVideo} = useHistory()
-    const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
+    const {postWatchLater} = useWatchLaterVideo();
+    const {postHistoryVideo} = useHistory();
+    const {setDisplayModal} = useLibrary();
 
+    const isVideoCardExist = videoList.find((item)=>item._id===videoListId)
+  const openModalHandler = () =>{
+    setDisplayModal("flex")
+  }
     
   useEffect(()=>{
-    postHistoryVideo(isVideoCardExist, user.encodedToken)
+    postHistoryVideo(isVideoCardExist, user?.encodedToken)
    },[isVideoCardExist])
 
   return (
@@ -36,6 +42,8 @@ export const VideoPlayer = () => {
                     title="Embedded youtube"
                     className='youtube-iframe'
                 />
+                
+                <PlayListModal/>
                 <p className='video-title' >{isVideoCardExist.title}</p>
                 <div className='channel-logo-container'>
                   <img className='channel-logo' src={isVideoCardExist.channel_pic} alt="channel logo" />
@@ -51,7 +59,7 @@ export const VideoPlayer = () => {
                     <p  className='function-button-title'>Like</p>
                   </button>
 
-                  <button className='button-container'>
+                  <button className='button-container' onClick={openModalHandler}>
                     <PlaylistAddOutlinedIcon/>
                     <p className='function-button-title'>Save to play list</p>
                   </button>
