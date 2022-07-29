@@ -9,7 +9,6 @@ export const Library = () => {
   const { libraryName, getPlayListVideo, deleteLibraryName, playListVideo,removeVideoFromPlayList ,currentPlayListId } =
     useLibrary();
 
-    console.log(libraryName);
   return (
     <>
       {libraryName.length === 0 ? (
