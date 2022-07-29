@@ -103,7 +103,10 @@ const LibraryProvider = ({ children }) => {
           authorization: user.encodedToken,
         },
       });
-      setLibraryName(res.data.playlist);
+      setLibraryName(res.data.playlists);
+      const playlist = res.data.playlists.find((list) => list._id===playlistId)
+      setPlayListVideo(playlist.videos);
+
     } catch (error) {
       console.log(error);
     }
