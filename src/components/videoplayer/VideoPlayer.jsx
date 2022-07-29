@@ -43,7 +43,7 @@ export const VideoPlayer = () => {
                     className='youtube-iframe'
                 />
                 
-                <PlayListModal/>
+                <PlayListModal video={isVideoCardExist}/>
                 <p className='video-title' >{isVideoCardExist.title}</p>
                 <div className='channel-logo-container'>
                   <img className='channel-logo' src={isVideoCardExist.channel_pic} alt="channel logo" />
