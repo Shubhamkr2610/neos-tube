@@ -39,12 +39,24 @@
   cursor: pointer;
   color: var(--video-library-primary-color);
 }
+.created-play-list{
+  width: fit-content;
+  letter-spacing: 1px;
+  font-weight: 600; 
+}
+.created-play-list:hover{
+  color: var(--button-bg-color-primary);
+  background-color: var(--video-library-primary-color); 
+  width: fit-content;
+  cursor: pointer;
+}
 
 .playlist-modal-name-container {
   display: flex;
 }
 
 .modal-text-input {
+  padding: 2px;
   outline: none;
   border: 1px solid var(--video-library-primary-color);
   background-color: transparent;

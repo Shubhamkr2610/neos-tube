@@ -1,3 +1,27 @@
 .library-page-container{
     display: flex;
 }
+.library-playlist-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.library-playlist-name-container{
+    margin-bottom: 5px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.library-playlist-name{
+    box-shadow:  rgba(0,0,0,.35) 0px 5px 15px;
+    padding: 0 1rem ;
+    width: fit-content;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.library-playlist-delete-button{
+    margin-left: auto;
+}
+.library-playlist-delete-button:hover{
+    cursor: pointer;
+}

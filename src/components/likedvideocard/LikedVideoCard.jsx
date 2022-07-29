@@ -15,6 +15,7 @@ export const LikedVideoCard = ({
   channel_pic,
   categoryName,
   removeVideoCard,
+  currentPlayListId
 }) => {
 
   const {videoList} = useVideoList()
@@ -39,7 +40,7 @@ export const LikedVideoCard = ({
             />
             <div className="liked-video-card-title"> {title}</div>
           </div>
-          <button className="delete-card-button" onClick={()=>removeVideoCard(_id)}>
+          <button className="delete-card-button" onClick={()=>removeVideoCard(_id , currentPlayListId)}>
             <DeleteIcon/>
           </button>
         </div>
