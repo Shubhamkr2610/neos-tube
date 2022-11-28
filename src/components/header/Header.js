@@ -15,10 +15,11 @@ export const Header = () => {
           <img src={brandlogo} className="brand-logo" alt="brand-logo" />
           <div className="">NeosTube</div>
         </Link>
-        <div className="searchbar-container">
+        {/* code for future use */}
+        {/* <div className="searchbar-container">
           <input placeholder="Type to search videos " className="search-input" />
           <SearchRoundedIcon sx={{ fontSize: 37 }} className="search-icon" />
-        </div>
+        </div> */}
         {user?  <Link to="/profile" className="login-button">
           <PersonIcon sx={{ fontSize: 35 }} />
         </Link> : 
