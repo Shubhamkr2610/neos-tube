@@ -71,10 +71,6 @@ export const VideoPlayer = () => {
                     <WatchLaterOutlinedIcon/>
                     <p className='function-button-title'>Watch Later</p>
                   </button>
-
-                  <button onClick={()=>downloadHandler(videoListId)}>
-                    Download
-                  </button>
                 </div>
 
                 <p className='video-description'>{isVideoCardExist.description}</p>
