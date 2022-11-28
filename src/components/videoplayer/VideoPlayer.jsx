@@ -26,6 +26,9 @@ export const VideoPlayer = () => {
   const openModalHandler = () =>{
     setDisplayModal("flex")
   }
+  const downloadHandler =(videoListId) =>{
+    
+  }
     
   useEffect(()=>{
     postHistoryVideo(isVideoCardExist, user?.encodedToken)
@@ -67,6 +70,10 @@ export const VideoPlayer = () => {
                   <button className='button-container'  onClick={()=>postWatchLater(videoListId, user.encodedToken)}>
                     <WatchLaterOutlinedIcon/>
                     <p className='function-button-title'>Watch Later</p>
+                  </button>
+
+                  <button onClick={()=>downloadHandler(videoListId)}>
+                    Download
                   </button>
                 </div>
 
