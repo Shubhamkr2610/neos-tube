@@ -7,8 +7,9 @@ export const PrivateRoute = () => {
     const {user} = useAuth()
   // return (
     // <>
-        if(!user)
-            return <Navigate to='/login' replace />
+        if(!user){
+          return <Navigate to='/login' replace />
+        }
         return <Outlet/>
     // </>
   // )
